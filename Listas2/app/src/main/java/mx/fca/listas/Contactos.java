@@ -11,7 +11,8 @@ public class Contactos {
                     R.mipmap.yo_mero,
                     "fallangel@gmail.com",
                     "",
-                    "Mi casita :D"),
+                    "Mi casita :D")
+
             new Contacto(
                     "el papucho keeanu",
                     "(+52) 1234 5678",
