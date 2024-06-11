@@ -38,12 +38,12 @@ public class AvionAdapter extends RecyclerView.Adapter<AvionAdapter.CeldaViewHol
             holder.imageView.setImageResource(android.R.color.transparent);
         }
     }
-    //número total de ítems en el adaptador
+
     @Override
     public int getItemCount() {
         return rows * cols;
     }
-//Actualizar matriz de aviones, num de filas y columnas. Notificar cambios
+
     public void updatePlano(Avion[][] nuevoPlano, int newRows, int newCols) {
         this.planoMatriz = nuevoPlano;
         this.rows = newRows;

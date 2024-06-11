@@ -11,13 +11,13 @@ public class Analizador {
 
     static HashMap<Integer, Plano> memoria = new HashMap<>();
 
-    // Inicializa el plano en la memoria
+
     public static Plano inicializa(Plano plano) {
         memoria.put(0, plano);
         return plano;
     }
 
-    // Calcula el siguiente plano
+
     public static Plano next(int noPaso, Plano plano) {
         if (memoria.containsKey(noPaso)) {
             return memoria.get(noPaso);
@@ -45,9 +45,8 @@ public class Analizador {
                 nuevosAviones.add(avion);
             }
 
-            // Detecta colisiones
+
             if (detectaColisiones(nuevosAviones, colisiones)) {
-                // Maneja las colisiones, aquí se puede agregar lógica adicional si es necesario
             }
 
             planoNuevo = new Plano(noPaso + 1, nuevosAviones, colisiones);
@@ -56,12 +55,12 @@ public class Analizador {
         }
     }
 
-    // Retorna al plano anterior
+
     public static Plano prev(int noPaso) {
         return memoria.get(noPaso - 1);
     }
 
-    // Detecta colisiones entre los aviones
+
     public static boolean detectaColisiones(@NonNull List<Avion> aviones, List<Colision> colisiones) {
         Set<String> posiciones = new HashSet<>();
         boolean colisionDetectada = false;
@@ -78,7 +77,7 @@ public class Analizador {
         return colisionDetectada;
     }
 
-    // Clase Colision
+
     public static class Colision {
         int x, y;
 
