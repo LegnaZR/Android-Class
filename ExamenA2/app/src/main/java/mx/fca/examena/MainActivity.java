@@ -34,7 +34,6 @@ public class MainActivity extends Activity {
                     int number = Integer.parseInt(inputText);
                     int sqrt = (int) Math.sqrt(number);
                     if (sqrt * sqrt == number) {
-                        // Es un cuadrado perfecto
                         showPantalla2(number);
                     } else {
                         txvInfo.setText("El número no es un cuadrado perfecto.");
